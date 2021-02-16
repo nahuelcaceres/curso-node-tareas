@@ -19,6 +19,8 @@ const main = async () => {
 
         option = await inquirerMenu();
 
+        // TODO: Claramente hay que hacer un refactor, pero por ahora quiero agarrar
+        // confianza con node (y js)
         switch (option) {
             case '1':
                 const desc = await inputRead('Descripcion:'); 
@@ -55,6 +57,7 @@ const main = async () => {
                 }
                 break;
         }
+        // fin del refactor.
 
         save( tasks.arrayList );
 
